@@ -2,7 +2,7 @@
 //  MovieCell.swift
 //  flix
 //
-//  Created by Raquel Figueroa-Opperman on 2/1/18.
+//  Created by Raquel Figueroa-Opperman on 2/2/18.
 //  Copyright © 2018 Raquel Figueroa-Opperman. All rights reserved.
 //
 
@@ -12,6 +12,7 @@ class MovieCell: UITableViewCell {
 
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var overviewLabel: UILabel!
+    @IBOutlet weak var posterImageView: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()

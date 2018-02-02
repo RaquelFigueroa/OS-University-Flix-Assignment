@@ -42,10 +42,9 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RUX-AB-M1V">
-                                                    <rect key="frame" x="143" y="40" width="232" height="99"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="02Z-ra-VYt">
+                                                    <rect key="frame" x="125" y="40" width="235" height="107"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <string key="text">lots of text!!!!!!!!lots of text!!!!!!!!lots of text!!!!!!!!lots of text!!!!!!!!lots of text!!!!!!!!lots of text!!!!!!!!lots of text!!!!!!!!lots of text!!!!!!!!lots of text!!!!!!!!lots of text!!!!!!!!</string>
                                                     <fontDescription key="fontDescription" type="system" weight="thin" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -53,8 +52,9 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="overviewLabel" destination="RUX-AB-M1V" id="c0k-UR-b0j"/>
-                                            <outlet property="titleLabel" destination="STn-GG-nUI" id="MMN-6F-U4j"/>
+                                            <outlet property="overviewLabel" destination="02Z-ra-VYt" id="8th-wA-vwC"/>
+                                            <outlet property="posterImageView" destination="STr-RC-iPs" id="1qZ-YO-skh"/>
+                                            <outlet property="titleLabel" destination="STn-GG-nUI" id="uRo-Dy-tQ6"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
