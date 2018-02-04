@@ -28,8 +28,14 @@ class NowPlayingViewController: UIViewController, UITableViewDataSource {
         tableView.insertSubview(refreshControl, at: 0)
         tableView.dataSource = self
         
-        fetchMovies()
-        activityIndicator.stopAnimating()
+        delay(3)  //Here you put time you want to delay
+        {
+            //your delayed code
+            self.fetchMovies()
+            self.activityIndicator.stopAnimating()
+        }
+        
+        
     }
     
     @objc func didPullToRefresh(_ refreshControl: UIRefreshControl) {
@@ -49,6 +55,25 @@ class NowPlayingViewController: UIViewController, UITableViewDataSource {
         let task = session.dataTask(with: request) { (data, respo, error) in
             if let error = error {
                 print(error.localizedDescription)
+                if (error.localizedDescription == "The Internet connection appears to be offline."){
+                    //alert functionality:
+                    let alertController = UIAlertController(title: "Network Connection Failure", message: "The Internet connection appears to be offline. Would you like to reload?", preferredStyle: .alert)
+                    
+                    let cancelAction = UIAlertAction(title: "Cancel: Exit App", style: .cancel) { (action) in
+                        exit(0)
+                    }
+                    
+                    let okAction = UIAlertAction(title: "OK", style: .default) { (action) in
+                        self.fetchMovies()
+                    }
+                    
+                    alertController.addAction(cancelAction)
+                    alertController.addAction(okAction)
+                    
+                    self.present(alertController, animated: true){
+                        print("success!")
+                    }
+                }
             } else if let data = data {
                 let dataDictionary = try! JSONSerialization.jsonObject(with: data, options:[]) as! [String: Any]
                 let movies = dataDictionary["results"] as! [[String: Any]]
@@ -87,7 +112,10 @@ class NowPlayingViewController: UIViewController, UITableViewDataSource {
     }
     
     
-    
+    func delay(_ delay:Double, closure:@escaping ()->()) {
+        DispatchQueue.main.asyncAfter(
+            deadline: DispatchTime.now() + Double(Int64(delay * Double(NSEC_PER_SEC))) / Double(NSEC_PER_SEC), execute: closure)
+    }
 
 
 }
