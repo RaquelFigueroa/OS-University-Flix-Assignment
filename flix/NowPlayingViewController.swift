@@ -28,14 +28,8 @@ class NowPlayingViewController: UIViewController, UITableViewDataSource {
         tableView.insertSubview(refreshControl, at: 0)
         tableView.dataSource = self
         
-        delay(3)  //Here you put time you want to delay
-        {
-            //your delayed code
-            self.fetchMovies()
-            self.activityIndicator.stopAnimating()
-        }
-        
-        
+        fetchMovies()
+        activityIndicator.stopAnimating()
     }
     
     @objc func didPullToRefresh(_ refreshControl: UIRefreshControl) {
@@ -110,12 +104,5 @@ class NowPlayingViewController: UIViewController, UITableViewDataSource {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    
-    func delay(_ delay:Double, closure:@escaping ()->()) {
-        DispatchQueue.main.asyncAfter(
-            deadline: DispatchTime.now() + Double(Int64(delay * Double(NSEC_PER_SEC))) / Double(NSEC_PER_SEC), execute: closure)
-    }
-
 
 }
