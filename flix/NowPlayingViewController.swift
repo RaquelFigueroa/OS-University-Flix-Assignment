@@ -11,13 +11,12 @@ import AlamofireImage
 
 class NowPlayingViewController: UIViewController, UITableViewDataSource {
 
-    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
-    
-    @IBOutlet weak var tableView: UITableView!
+    //property to store returned movies:
     var movies: [[String: Any]] = []
-    var refreshControl: UIRefreshControl!
     
-
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    @IBOutlet weak var tableView: UITableView!
+    var refreshControl: UIRefreshControl!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -60,6 +59,7 @@ class NowPlayingViewController: UIViewController, UITableViewDataSource {
         }
         task.resume()
     }
+    
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return movies.count
