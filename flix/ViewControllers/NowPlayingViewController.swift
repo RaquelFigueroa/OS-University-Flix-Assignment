@@ -10,7 +10,7 @@ import UIKit
 import AlamofireImage
 
 class NowPlayingViewController: UIViewController, UITableViewDataSource {
-
+    
     //property to store returned movies:
     var movies: [[String: Any]] = []
     
@@ -21,7 +21,7 @@ class NowPlayingViewController: UIViewController, UITableViewDataSource {
     override func viewDidLoad() {
         super.viewDidLoad()
         activityIndicator.startAnimating()
-
+        
         refreshControl = UIRefreshControl()
         refreshControl.addTarget(self, action: #selector(NowPlayingViewController.didPullToRefresh(_:)), for: .valueChanged)
         
@@ -34,8 +34,8 @@ class NowPlayingViewController: UIViewController, UITableViewDataSource {
     
     @objc func didPullToRefresh(_ refreshControl: UIRefreshControl) {
         fetchMovies()
-
-
+        
+        
     }
     
     
@@ -79,7 +79,7 @@ class NowPlayingViewController: UIViewController, UITableViewDataSource {
         task.resume()
     }
     
-
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return movies.count
     }
@@ -95,14 +95,25 @@ class NowPlayingViewController: UIViewController, UITableViewDataSource {
         let posterPathString = movie["poster_path"] as! String
         let baseURLString = "https://image.tmdb.org/t/p/w500"
         let posterURL = URL(string: baseURLString + posterPathString)!
-
+        
         cell.posterImageView.af_setImage(withURL: posterURL)
         return cell
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let cell = sender as! UITableViewCell
+        if let indexPath = tableView.indexPath(for: cell) {
+            let movie = movies[indexPath.row]
+            let detailViewController = segue.destination as! DetailViewController
+            detailViewController.movie = movie
+        }
+        
+        
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
 }
