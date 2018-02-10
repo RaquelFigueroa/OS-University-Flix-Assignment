@@ -54,7 +54,7 @@
                                             <outlet property="overviewLabel" destination="02Z-ra-VYt" id="8th-wA-vwC"/>
                                             <outlet property="posterImageView" destination="STr-RC-iPs" id="1qZ-YO-skh"/>
                                             <outlet property="titleLabel" destination="STn-GG-nUI" id="uRo-Dy-tQ6"/>
-                                            <segue destination="x52-Oa-m9l" kind="show" id="CgY-r2-arM"/>
+                                            <segue destination="x52-Oa-m9l" kind="show" identifier="movieTableView" id="CgY-r2-arM"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -168,7 +168,7 @@
             </objects>
             <point key="canvasLocation" x="-1191" y="33"/>
         </scene>
-        <!--Superhero View Controller-->
+        <!--Superhero-->
         <scene sceneID="SU7-j8-pra">
             <objects>
                 <viewController id="lcF-pa-46h" customClass="SuperheroViewController" customModule="flix" customModuleProvider="target" sceneMemberID="viewController">
@@ -202,6 +202,7 @@
                                         </view>
                                         <connections>
                                             <outlet property="posterImageView" destination="eYv-h7-4Sd" id="dMB-dd-K76"/>
+                                            <segue destination="x52-Oa-m9l" kind="show" identifier="testing" id="Hx5-gl-Qqg"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -210,14 +211,35 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="AAa-PJ-p5d"/>
                     </view>
-                    <navigationItem key="navigationItem" id="M11-hH-Bxm"/>
+                    <navigationItem key="navigationItem" title="Superhero" id="M11-hH-Bxm"/>
                     <connections>
-                        <outlet property="collectionView" destination="IfA-gG-2vl" id="J5M-f5-1yM"/>
+                        <outlet property="collectionView" destination="IfA-gG-2vl" id="NbH-op-va6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0wo-dw-EEH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-204.34782608695653" y="875.54347826086962"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="sKZ-My-qut">
+            <objects>
+                <viewController id="ydH-FR-oPF" customClass="DetailViewController" customModule="flix" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gU2-cj-OL0">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UWT-Gz-9d3">
+                                <rect key="frame" x="0.0" y="64" width="414" height="334"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="RHm-pk-0bc"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3pj-GL-kVV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1020" y="919"/>
         </scene>
         <!--Superhero-->
         <scene sceneID="2At-02-eOL">
@@ -243,4 +265,7 @@
         <image name="now_playing_tabbar_item" width="21" height="21"/>
         <image name="superhero_tabbar_item" width="21" height="23"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="CgY-r2-arM"/>
+    </inferredMetricsTieBreakers>
 </document>

@@ -9,7 +9,7 @@
 import UIKit
 import AlamofireImage
 
-class NowPlayingViewController: UIViewController, UITableViewDataSource {
+class NowPlayingViewController: UIViewController, UITableViewDataSource{
     
     //property to store returned movies:
     var movies: [[String: Any]] = []
@@ -34,8 +34,6 @@ class NowPlayingViewController: UIViewController, UITableViewDataSource {
     
     @objc func didPullToRefresh(_ refreshControl: UIRefreshControl) {
         fetchMovies()
-        
-        
     }
     
     
@@ -100,15 +98,14 @@ class NowPlayingViewController: UIViewController, UITableViewDataSource {
         return cell
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let cell = sender as! UITableViewCell
-        if let indexPath = tableView.indexPath(for: cell) {
-            let movie = movies[indexPath.row]
-            let detailViewController = segue.destination as! DetailViewController
-            detailViewController.movie = movie
-        }
-        
-        
+    override func prepare(for segue: UIStoryboardSegue, sender: Any!) {
+
+            let cell = sender as! UITableViewCell
+            if let indexPath = tableView.indexPath(for: cell) {
+                let movie = movies[indexPath.row]
+                let detailViewController = segue.destination as! DetailViewController
+                detailViewController.movie = movie
+            }
     }
     
     override func didReceiveMemoryWarning() {
