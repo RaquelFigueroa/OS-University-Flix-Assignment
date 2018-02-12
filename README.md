@@ -64,7 +64,7 @@ limitations under the License.
 
 **Flix** is a movies app displaying box office and top rental DVDs using [The Movie Database API](http://docs.themoviedb.apiary.io/#).
 
-Time spent: **2.5** hours spent in total
+Time spent: **5.5** hours spent in total
 
 ## User Stories
 
@@ -75,9 +75,9 @@ The following **required** functionality is completed:
 
 The following **stretch** features are implemented:
 
-- [ ] User can tap a poster in the collection view to see a detail screen of that movie (+3pts)
+- [x] User can tap a poster in the collection view to see a detail screen of that movie (+3pts)
 - [ ] In the detail view, when the user taps the poster, a new screen is presented modally where they can view the trailer (+3pts)
-- [ ] Customize the navigation bar (+1pt)
+- [x] Customize the navigation bar (+1pt)
 - [ ] List in any optionals you didn't finish from last week (+1-3pts)
 - ...
 - ...
@@ -88,8 +88,8 @@ The following **additional** features are implemented:
 
 Please list two areas of the assignment you'd like to **discuss further with your peers** during the next class (examples include better ways to implement something, how to extend your app in certain ways, etc):
 
-1.
-2.
+1. It would be helpful to learn more about customization in general. How to play more with background colors/images.
+2. I would greatly like to discuss how others are implementing some of the optional tasks. What resources are they using?
 
 ## Video Walkthrough
 
@@ -101,11 +101,11 @@ GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
 ## Notes
 
-Describe any challenges encountered while building the app.
+One challege I encountered occured when I was implementing the ability to view the detail movie view for the controller view. I understood that I would be able to use the previously made detail view controller, but I believed it was solely accessible from `NowPlayingViewController.swift` file. I tried to create a way for the file to recognize whether the segue request was coming from the `MovieCell` or `PosterCell`. I soon realized that this was not the case and that the `SuperheroViewController.swift` file would have the code for the segue from the `MovieCell`. I did learn how to access a segue identifier, which I believe will be helpful for future iOS development projects.
 
 ## License
 
-Copyright 2018 CSUMB
+Copyright 2018 R. Figueroa
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.

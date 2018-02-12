@@ -49,6 +49,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="overviewLabel" destination="02Z-ra-VYt" id="8th-wA-vwC"/>
@@ -129,7 +130,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s3x-Sg-nnL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1569.5652173913045" y="32.608695652173914"/>
+            <point key="canvasLocation" x="703" y="876"/>
         </scene>
         <!--Now Playing-->
         <scene sceneID="ZSq-5U-oIh">
@@ -137,9 +138,18 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="gEV-lW-LcG" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Now Playing" image="now_playing_tabbar_item" id="d9K-Cc-6GK"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="lxe-Je-NID">
+                    <navigationBar key="navigationBar" alpha="0.10000000000000001" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="lxe-Je-NID">
                         <rect key="frame" x="0.0" y="20" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" type="italicSystem" pointSize="26"/>
+                            <color key="textColor" red="0.21048662420227421" green="0.40500860848268311" blue="0.62081039507772018" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <color key="textShadowColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <fontDescription key="fontDescription" type="italicSystem" pointSize="0.0"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -156,6 +166,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="Vw2-gC-ru4" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="TOE-QB-5AI">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
@@ -239,7 +250,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3pj-GL-kVV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1020" y="919"/>
+            <point key="canvasLocation" x="2317" y="858"/>
         </scene>
         <!--Superhero-->
         <scene sceneID="2At-02-eOL">
@@ -250,6 +261,11 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Op4-qY-Umi">
                         <rect key="frame" x="0.0" y="20" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" type="italicSystem" pointSize="25"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -258,7 +274,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pbU-Th-sTh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1149.2753623188407" y="886.95652173913049"/>
+            <point key="canvasLocation" x="-1191" y="876"/>
         </scene>
     </scenes>
     <resources>
