@@ -249,12 +249,17 @@
                                             <rect key="frame" x="0.0" y="0.0" width="138" height="163"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eYv-h7-4Sd">
-                                                    <rect key="frame" x="0.0" y="0.0" width="138" height="163"/>
-                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eYv-h7-4Sd">
+                                                    <rect key="frame" x="8" y="8" width="122" height="147"/>
                                                 </imageView>
                                             </subviews>
                                         </view>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="eYv-h7-4Sd" secondAttribute="trailing" constant="8" id="667-eX-bYw"/>
+                                            <constraint firstAttribute="bottom" secondItem="eYv-h7-4Sd" secondAttribute="bottom" constant="8" id="I5S-JT-3xP"/>
+                                            <constraint firstItem="eYv-h7-4Sd" firstAttribute="top" secondItem="jll-Sy-5ZF" secondAttribute="top" constant="8" id="QVF-HX-VCI"/>
+                                            <constraint firstItem="eYv-h7-4Sd" firstAttribute="leading" secondItem="jll-Sy-5ZF" secondAttribute="leading" constant="8" id="jkI-Rb-UDN"/>
+                                        </constraints>
                                         <connections>
                                             <outlet property="posterImageView" destination="eYv-h7-4Sd" id="dMB-dd-K76"/>
                                             <segue destination="x52-Oa-m9l" kind="show" identifier="testing" id="Hx5-gl-Qqg"/>
@@ -326,6 +331,6 @@
         <image name="superhero_tabbar_item" width="21" height="23"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="CgY-r2-arM"/>
+        <segue reference="Hx5-gl-Qqg"/>
     </inferredMetricsTieBreakers>
 </document>
