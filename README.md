@@ -206,7 +206,7 @@ Please list two areas of the assignment you'd like to **discuss further with you
 
 Here's a walkthrough of implemented user stories:
 
-<img src='https://i.imgur.com/AQZ8xFd.gifv' width='' alt='Video Walkthrough' />
+<img src='https://raw.githubusercontent.com/RaquelFigueroa/OS-University-Flix-Assignment/master/images/lab5_flix_demo.gif' width='' alt='Video Walkthrough' />
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
